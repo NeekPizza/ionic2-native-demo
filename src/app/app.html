@@ -1,0 +1,46 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <button menuClose ion-item (click)="goHome()">
+        <ion-icon name="home"></ion-icon>
+        Home
+      </button>
+      <button menuClose ion-item (click)="goToVibrate()">
+        <ion-icon name="pulse"></ion-icon>
+        Vibration
+      </button>
+      <button menuClose ion-item (click)="goToGeoLocation()">
+        <ion-icon name="locate"></ion-icon>
+        GeoLocation
+      </button>
+      <button menuClose ion-item (click)="goToCamera()">
+        <ion-icon name="camera"></ion-icon>
+        Camera
+      </button>
+      <button menuClose ion-item (click)="goToBarcodeScanner()">
+        <ion-icon name="barcode"></ion-icon>
+        Barcode Scanner
+      </button>
+      <button menuClose ion-item (click)="goToDeviceMotion()">
+        <ion-icon name="contract"></ion-icon>
+        Device Motion
+      </button>
+      <button menuClose ion-item (click)="goToLocalNotifications()">
+        <ion-icon name="notifications"></ion-icon>
+        Local Notifications
+      </button>
+
+
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
